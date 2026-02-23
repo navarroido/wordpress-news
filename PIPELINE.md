@@ -2,6 +2,7 @@
 
 > This file is read by the cron agent every morning.
 > Follow these steps exactly, in order. Do not skip steps.
+> **Newsletter language: ENGLISH ONLY. All content, copy, and HTML template must be in English.**
 
 ---
 
@@ -40,25 +41,25 @@ Sources to search:
 - make.wordpress.org/core
 - kinsta.com/blog
 - wpbeginner.com news
-- searchengineland.com (WordPress-related)
 - torquemag.io
+- searchengineland.com (WordPress-related)
 
-**Rules:**
+Rules:
 - Only include items published in the last 48 hours
-- Skip any URL already in history (you will receive the list)
-- Each item must have: title, URL, 2-sentence summary in Hebrew, category tag
+- Skip any URL already in the covered history list (you will receive it)
+- Each item must have: title, URL, 2-sentence English summary, category tag
 - Categories: Core Update / Plugin / Security / Industry News / Tutorial / Podcast / Research
 - Prefer: releases, major announcements, significant research — avoid minor blog posts
 
-**Already covered URLs (skip these):**
+Already covered URLs (skip these):
 [INSERT history URLs here]
 
-**Output format (JSON array):**
+Output format (JSON array):
 [
   {
     "title": "...",
     "url": "...",
-    "summary_he": "...",
+    "summary_en": "...",
     "category": "...",
     "emoji": "..."
   }
@@ -88,18 +89,19 @@ If no OG image found, use: `https://s.w.org/images/home/wordpress-default-ogimag
 Spawn Ink (model: gpt-4o) with this task:
 
 ```
-You are Ink, a Hebrew copywriter specializing in tech newsletters.
+You are Ink, a copywriter specializing in tech newsletters.
 
-Write polished Hebrew newsletter copy for these WordPress news items.
-Keep it sharp, professional, and readable. Avoid jargon overload.
-Each item should have:
-- headline_he: punchy Hebrew headline (max 12 words)
-- body_he: 2-3 sentences in Hebrew, engaging and informative
-- cta_he: call-to-action text (e.g. "קרא עוד", "האזן כאן", "לפרטים נוספים")
+Write sharp, engaging English newsletter copy for these WordPress news items.
+Keep it concise, professional, and readable. No jargon overload.
+
+Each item needs:
+- headline_en: punchy English headline (max 12 words)
+- body_en: 2-3 sentences in English, engaging and informative
+- cta_en: call-to-action text (e.g. "Read more", "Listen now", "Full details")
 
 Also write a "trend_of_the_week" block:
-- title_he: headline for the week's main trend (max 10 words)  
-- body_he: 2-3 sentences about the dominant theme across this week's news
+- title_en: headline for the week's main trend (max 10 words)
+- body_en: 2-3 sentences about the dominant theme across this week's news
 
 Items: [INSERT DEX OUTPUT HERE]
 
@@ -112,42 +114,76 @@ Wait for Ink to return copy.
 
 ## Step 5 — Build Newsletter HTML
 
-Use the template below. Replace all [PLACEHOLDERS] with actual data.
+Use the structure below. All text is in English, layout is LTR.
 Save to: `/root/.openclaw/workspace/wordpress-news/newsletters/YYYY-MM-DD.html`
 
 **Template rules:**
-- RTL, Hebrew, Heebo font
-- Items 1 and 2: full-width cards with large hero image
+- LTR, English, Inter/system font stack
+- lang="en" dir="ltr"
+- Items 1 and 2: full-width cards with large hero image (height: 240px, object-fit: cover)
 - Items 3 and 4: side-by-side half-width cards
-- Item 5: horizontal card (image right, text left)  
+- Item 5: horizontal card (image right, text left)
 - Trend box: dark purple gradient at the bottom
 - Issue number: count from history.json totalIssues + 1
-- Footer: issue number, date, "נוצר על ידי Navarro 🦅"
+- Header: dark gradient, "WP Pulse" title, subtitle "Your weekly WordPress digest", date in English
+- CTA buttons: use Ink's cta_en text
+- Footer: "Issue #N · [Date] · Built by Navarro 🦅"
+
+**Base HTML structure to follow:**
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Pulse — [DATE]</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#f0f2f5; font-family:'Inter',Arial,sans-serif; direction:ltr; }
+    a { text-decoration:none; color:inherit; }
+    img { display:block; max-width:100%; border:0; }
+  </style>
+</head>
+<body>
+<!-- Header: dark gradient, WP Pulse branding, stats bar -->
+<!-- Items 1–2: full-width cards -->
+<!-- Items 3–4: side-by-side cards -->
+<!-- Item 5: horizontal card -->
+<!-- Trend box: purple gradient -->
+<!-- Footer -->
+</body>
+</html>
+```
+
+Build the full HTML expanding this structure with all real content from Dex + Ink.
 
 ---
 
 ## Step 6 — Update index.html
 
 Read `/root/.openclaw/workspace/wordpress-news/index.html`
-Add a new `.issue-card` entry at the TOP of the issues list.
+Add a new `.issue-card` entry at the TOP of the issues list (in English).
 New entry format:
 ```html
 <a href="newsletters/YYYY-MM-DD.html" class="issue-card">
   <div class="issue-left">
-    <div class="issue-num">גיליון #[N]</div>
+    <div class="issue-num">Issue #[N]</div>
     <div class="issue-title">
-      <span class="latest-badge">חדש</span>
-      [FIRST HEADLINE] &amp; עוד [N-1] ידיעות
+      <span class="latest-badge">New</span>
+      [FIRST HEADLINE] &amp; [N-1] more stories
     </div>
     <div class="issue-meta">
-      <span class="pill">[DATE IN HEBREW FORMAT]</span>
-      <span class="pill">[N] ידיעות</span>
+      <span class="pill">[DATE e.g. Feb 24, 2026]</span>
+      <span class="pill">[N] stories</span>
     </div>
   </div>
-  <div class="arrow">←</div>
+  <div class="arrow">→</div>
 </a>
 ```
-Remove "חדש" badge from the previous issue's entry.
+Remove "New" badge from the previous issue entry.
+Update index.html text to English if it contains Hebrew.
 
 ---
 
@@ -172,18 +208,20 @@ git push
 
 ## Step 9 — Notify Ido
 
-Send a Telegram message to Ido (channel: telegram) with:
+Send a Telegram message to Ido (channel: telegram) in Hebrew with:
 ```
-🗞️ WP Pulse #[N] — [DATE] מוכן!
+🗞️ WP Pulse #[N] — [DATE in Hebrew] מוכן!
 
-[EMOJI] [HEADLINE 1]
-[EMOJI] [HEADLINE 2]  
-[EMOJI] [HEADLINE 3]
-[EMOJI] [HEADLINE 4]
-[EMOJI] [HEADLINE 5]
+[EMOJI] [HEADLINE 1 — in English]
+[EMOJI] [HEADLINE 2 — in English]
+[EMOJI] [HEADLINE 3 — in English]
+[EMOJI] [HEADLINE 4 — in English]
+[EMOJI] [HEADLINE 5 — in English]
 
 🔗 https://navarroido.github.io/wordpress-news/newsletters/YYYY-MM-DD.html
 ```
+
+(The Telegram notification to Ido is in Hebrew — only the newsletter itself is in English.)
 
 ---
 
