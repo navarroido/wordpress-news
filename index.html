@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Pulse — ארכיון ניוזלייטר WordPress</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f0f2f5; font-family: 'Heebo', Arial, sans-serif; direction: rtl; min-height: 100vh; }
+    .header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 60px 20px 48px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 { font-size: 52px; font-weight: 900; color: #fff; letter-spacing: -2px; margin-bottom: 10px; }
+    .subtitle { font-size: 17px; color: rgba(255,255,255,0.55); }
+    .container { max-width: 680px; margin: 0 auto; padding: 40px 20px 60px; }
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #9ca3af;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .issue-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .issue-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.13); transform: translateY(-2px); }
+    .issue-left {}
+    .issue-num { font-size: 12px; font-weight: 700; color: #9ca3af; margin-bottom: 4px; letter-spacing: 1px; }
+    .issue-title { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 6px; }
+    .issue-meta { font-size: 13px; color: #6b7280; }
+    .pill {
+      display: inline-block;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-right: 6px;
+    }
+    .arrow {
+      font-size: 22px;
+      color: #d1d5db;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    .issue-card:hover .arrow { color: #374151; }
+    .latest-badge {
+      display: inline-block;
+      background: #f0fdf4;
+      color: #16a34a;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">WordPress Newsletter</div>
+  <h1>WP Pulse</h1>
+  <p class="subtitle">העדכונים החשובים מעולם WordPress — שבועי</p>
+</div>
+
+<div class="container">
+
+  <div class="section-title">📬 גיליונות</div>
+
+  <a href="newsletters/2026-02-23.html" class="issue-card">
+    <div class="issue-left">
+      <div class="issue-num">גיליון #001</div>
+      <div class="issue-title">
+        <span class="latest-badge">חדש</span>
+        WordPress 7.0 Beta 1 &amp; עוד 4 ידיעות
+      </div>
+      <div class="issue-meta">
+        <span class="pill">23 פברואר 2026</span>
+        <span class="pill">5 ידיעות</span>
+      </div>
+    </div>
+    <div class="arrow">←</div>
+  </a>
+
+</div>
+
+</body>
+</html>
