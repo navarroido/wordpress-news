@@ -125,7 +125,7 @@ Save to: `/root/.openclaw/workspace/wordpress-news/newsletters/YYYY-MM-DD.html`
 - Item 5: horizontal card (image right, text left)
 - Trend box: dark purple gradient at the bottom
 - Issue number: count from history.json totalIssues + 1
-- Header: dark gradient, "WP Pulse" title, subtitle "Your weekly WordPress digest", date in English
+- Header: dark gradient, "WP Pulse" title, subtitle "Your weekly WordPress digest · [Day], [Date in English]" — no stats bar
 - CTA buttons: use Ink's cta_en text
 - Footer: "Issue #N · [Date] · Built by Navarro 🦅"
 
