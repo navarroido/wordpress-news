@@ -208,7 +208,12 @@ git push
 
 ## Step 9 — Notify Ido
 
-Send a Telegram message to Ido (channel: telegram) in Hebrew with:
+Use the `message` tool to send a Telegram message to Ido. Always use:
+- action: send
+- channel: telegram
+- to: 5267660109
+
+Message body (in Hebrew):
 ```
 🗞️ WP Pulse #[N] — [DATE in Hebrew] מוכן!
 
