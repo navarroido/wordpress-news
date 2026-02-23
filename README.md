@@ -17,8 +17,12 @@ assets/          → Shared images/logos
 2. **Ink** — writes Hebrew copy + headlines  
 3. **Navarro** — fetches OG images, builds HTML, pushes to repo
 
+## Live Site
+
+🌐 **https://navarroido.github.io/wordpress-news/**
+
 ## Issue Archive
 
-| Issue | Date | Items |
-|-------|------|-------|
-| [#001](newsletters/2026-02-23.html) | 23 Feb 2026 | 5 |
+| Issue | Date | Items | Link |
+|-------|------|-------|------|
+| #001 | 23 Feb 2026 | 5 | [View](https://navarroido.github.io/wordpress-news/newsletters/2026-02-23.html) |
