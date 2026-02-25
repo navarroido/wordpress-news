@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Pulse — Feb 25, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#f0f2f5; font-family:'Inter',Arial,sans-serif; direction:ltr; }
+    a { text-decoration:none; color:inherit; }
+    img { display:block; max-width:100%; border:0; }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 40%, #0f3460 100%);
+      padding: 56px 20px 48px;
+      text-align: center;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .header h1 {
+      font-size: 52px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -2px;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+    .header-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── Container ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    /* ── Category pill ── */
+    .cat-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .cat-core    { background:#eff6ff; color:#1d4ed8; }
+    .cat-security { background:#fef2f2; color:#dc2626; }
+    .cat-industry { background:#f0fdf4; color:#16a34a; }
+    .cat-tutorial { background:#fdf4ff; color:#9333ea; }
+    .cat-podcast  { background:#fff7ed; color:#ea580c; }
+    .cat-plugin   { background:#f0f9ff; color:#0369a1; }
+    .cat-research { background:#fefce8; color:#ca8a04; }
+
+    /* ── Full-width card (items 1 & 2) ── */
+    .card-full {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      display: block;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .card-full:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.14); transform: translateY(-2px); }
+    .card-full .hero-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .card-full .card-body {
+      padding: 28px 32px 32px;
+    }
+    .card-full .card-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .card-full .card-text {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .card-full .cta-btn {
+      display: inline-block;
+      background: #1d4ed8;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .card-full .cta-btn:hover { background: #1e40af; }
+
+    /* ── Half-width cards row (items 3 & 4) ── */
+    .cards-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card-half {
+      flex: 1;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      display: block;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .card-half:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.14); transform: translateY(-2px); }
+    .card-half .half-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-half .half-body {
+      padding: 20px 22px 24px;
+    }
+    .card-half .half-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    .card-half .half-text {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .card-half .cta-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1d4ed8;
+    }
+    .card-half .cta-link:hover { text-decoration: underline; }
+
+    /* ── Horizontal card (item 5) ── */
+    .card-horizontal {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: stretch;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .card-horizontal:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.14); transform: translateY(-2px); }
+    .card-horizontal .horiz-body {
+      flex: 1;
+      padding: 28px 28px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-horizontal .horiz-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    .card-horizontal .horiz-text {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .card-horizontal .cta-btn {
+      display: inline-block;
+      background: #1d4ed8;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 8px;
+      align-self: flex-start;
+      transition: background 0.15s;
+    }
+    .card-horizontal .cta-btn:hover { background: #1e40af; }
+    .card-horizontal .horiz-img-wrap {
+      width: 280px;
+      flex-shrink: 0;
+    }
+    .card-horizontal .horiz-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Trend box ── */
+    .trend-box {
+      background: linear-gradient(135deg, #2d1b69 0%, #4c1d95 50%, #1e1b4b 100%);
+      border-radius: 20px;
+      padding: 36px 36px 36px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 24px rgba(109,40,217,0.3);
+    }
+    .trend-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 12px;
+    }
+    .trend-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .trend-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 0 20px 48px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .header h1 { font-size: 38px; }
+      .cards-row { flex-direction: column; }
+      .card-horizontal { flex-direction: column; }
+      .card-horizontal .horiz-img-wrap { width: 100%; height: 180px; }
+      .card-horizontal .horiz-img { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="header">
+  <div class="header-badge">WordPress Newsletter</div>
+  <h1>WP Pulse</h1>
+  <p class="header-sub">Your weekly WordPress digest &middot; Wednesday, February 25, 2026</p>
+</div>
+
+<div class="container">
+
+  <!-- ── Item 1: Full-width ── -->
+  <a href="https://make.wordpress.org/core/2026/02/24/iframed-editor-changes-in-wordpress-7-0/" class="card-full" target="_blank" rel="noopener">
+    <img class="hero-img" src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="WordPress 7.0 Rewires the Editor Iframe Logic">
+    <div class="card-body">
+      <span class="cat-pill cat-core">🖼️ Core Update</span>
+      <div class="card-title">WordPress 7.0 Rewires the Editor Iframe Logic</div>
+      <p class="card-text">WordPress 7.0 is getting smarter about when to load the post editor inside an iframe: it will now only do so when every block in the post is API version 3 or higher. Gutenberg 22.6 starts enforcing this for classic themes, while full rollout in core is being phased in gradually. If you maintain custom blocks, now is the time to upgrade to v3.</p>
+      <span class="cta-btn">See what's changing</span>
+    </div>
+  </a>
+
+  <!-- ── Item 2: Full-width ── -->
+  <a href="https://make.wordpress.org/core/2026/02/24/introducing-core-team-reps-for-2026/" class="card-full" target="_blank" rel="noopener">
+    <img class="hero-img" src="https://make.wordpress.org/core/files/2026/02/wp-core-team-reps-2026-amy-kamala-jb-audras.png" alt="Meet the Two People Steering WordPress Core in 2026">
+    <div class="card-body">
+      <span class="cat-pill cat-industry">🏆 Industry News</span>
+      <div class="card-title">Meet the Two People Steering WordPress Core in 2026</div>
+      <p class="card-text">Amy Kamala and Jb Audras are officially WordPress Core Team Representatives for 2026. Kamala, sponsored by Elementor, also serves as Hosting Team Rep and release coordinator for the upcoming 7.0 launch, bringing a strong hosting and development background to the role. Audras returns as a veteran committer with deep roots in the project.</p>
+      <span class="cta-btn">Meet the reps</span>
+    </div>
+  </a>
+
+  <!-- ── Items 3 & 4: Side-by-side ── -->
+  <div class="cards-row">
+
+    <a href="https://make.wordpress.org/core/2026/02/24/performance-chat-summary-24-february-2026/" class="card-half" target="_blank" rel="noopener">
+      <img class="half-img" src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="Security Patch Shipped">
+      <div class="half-body">
+        <span class="cat-pill cat-security">🔒 Security</span>
+        <div class="half-title">Security Patch Shipped: Embed Optimizer Vulnerability Fixed</div>
+        <p class="half-text">A security flaw in the Embed Optimizer plugin was responsibly disclosed and patched fast, with a fix already out in the wild. The performance team also flagged a concern: real-time collaboration features may inadvertently disable object caching on the frontend.</p>
+        <span class="cta-link">Read the full summary →</span>
+      </div>
+    </a>
+
+    <a href="https://make.wordpress.org/core/2026/02/25/dev-chat-agenda-february-25-2026/" class="card-half" target="_blank" rel="noopener">
+      <img class="half-img" src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="Beta 2 Drops Tomorrow">
+      <div class="half-body">
+        <span class="cat-pill cat-core">📅 Core Update</span>
+        <div class="half-title">WordPress 7.0 Beta 2 Drops Tomorrow, AI Connectors on the Table</div>
+        <p class="half-text">WordPress 7.0 Beta 2 is landing on February 26, keeping the project on track for its April 9 final release. Today's dev chat puts the AI Connectors feature under the spotlight and opens discussion on three Real Time Collaboration issues flagged during last week's review with Matt Mullenweg.</p>
+        <span class="cta-link">Check the agenda →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── Item 5: Horizontal ── -->
+  <a href="https://kinsta.com/blog/blade-templating-wordpress-radicle/" class="card-horizontal" target="_blank" rel="noopener">
+    <div class="horiz-body">
+      <span class="cat-pill cat-tutorial">🔧 Tutorial</span>
+      <div class="horiz-title">Ditch Scattered PHP Templates: Build WordPress with Blade</div>
+      <p class="horiz-text">Laravel's Blade templating engine is now within reach for WordPress developers, thanks to the Radicle starter theme and Acorn framework. Kinsta's hands-on tutorial walks you through building reusable layouts, slots, and components so a single file update covers your entire site's nav or footer. A cleaner, more maintainable way to build.</p>
+      <span class="cta-btn">Read the tutorial</span>
+    </div>
+    <div class="horiz-img-wrap">
+      <img class="horiz-img" src="https://kinsta.com/wp-content/uploads/2026/01/blade-templating-in-wordpress-modern-template-development-with-radicle-on-kinsta.png" alt="Blade Templating in WordPress">
+    </div>
+  </a>
+
+  <!-- ── Trend of the Week ── -->
+  <div class="trend-box">
+    <div class="trend-label">✨ Trend of the Week</div>
+    <div class="trend-title">WordPress 7.0 Is Reshaping the Developer Experience</div>
+    <p class="trend-text">This week's news circles back to one theme: WordPress 7.0 is not just a version bump, it's a platform shift. From iframe logic overhauls and new leadership to Beta 2 on the doorstep and AI Connectors in active development, the core team is moving with rare focus and speed. Developers who want to stay ahead should be watching every release note closely.</p>
+  </div>
+
+</div>
+
+<!-- ── Footer ── -->
+<div class="footer">
+  Issue #3 &middot; Feb 25, 2026 &middot; Built by Navarro 🦅
+</div>
+
+</body>
+</html>
