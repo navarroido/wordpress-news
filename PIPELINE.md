@@ -34,15 +34,35 @@ TODAY: [insert today's date]
 
 Your job: Find 5 fresh, noteworthy WordPress/Elementor news items from the last 48 hours.
 
-Sources to search:
+Sources to search (rotate and diversify every day — do NOT default to the same 3-4 sites):
 - wordpress.org/news
 - wptavern.com
-- elementor.com/blog
 - make.wordpress.org/core
+- make.wordpress.org/plugins
+- make.wordpress.org/themes
+- post-status.com
 - kinsta.com/blog
-- wpbeginner.com news
+- wpbeginner.com/news
 - torquemag.io
+- elementor.com/blog
+- wpengine.com/blog
+- yoast.com/wordpress-news
+- wordfence.com/blog (security focus)
+- codeinwp.com/blog
+- deliciousbrains.com/blog
+- managewp.org
+- wpmudev.org/blog
+- ithemes.com/blog
+- siteground.com/blog
+- pressable.com/blog
+- wpkube.com
+- speckyboy.com
+- wedevs.com/blog
+- advancedcustomfields.com/blog
+- gravity forms blog (gravityforms.com/blog)
 - searchengineland.com (WordPress-related)
+- techcrunch.com (WordPress/Automattic-related)
+- venturebeat.com (WordPress/AI-related)
 
 Rules:
 - Only include items published in the last 48 hours

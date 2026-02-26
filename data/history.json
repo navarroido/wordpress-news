@@ -74,8 +74,33 @@
       "url": "https://kinsta.com/blog/blade-templating-wordpress-radicle/",
       "title": "Blade Templating in WordPress: Modern Template Development with Radicle on Kinsta",
       "date": "2026-02-25"
+    },
+    {
+      "url": "https://make.wordpress.org/core/2026/02/25/whats-new-in-gutenberg-22-6-25-february/",
+      "title": "What's New in Gutenberg 22.6? (25 February)",
+      "date": "2026-02-26"
+    },
+    {
+      "url": "https://www.wpbeginner.com/news/whats-coming-in-wordpress-7-0-features-and-screenshots/",
+      "title": "What's Coming in WordPress 7.0? (Features and Screenshots)",
+      "date": "2026-02-26"
+    },
+    {
+      "url": "https://solidwp.com/blog/wordpress-vulnerability-report-february-25-2026/",
+      "title": "WordPress Vulnerability Report — February 25, 2026",
+      "date": "2026-02-26"
+    },
+    {
+      "url": "https://wptavern.com/podcast/206-jonathan-desrosiers-on-wordpress-sustainability-community-engagement-and-release-strategies",
+      "title": "#206 – Jonathan Desrosiers on WordPress Sustainability, Community Engagement, and Release Strategies",
+      "date": "2026-02-26"
+    },
+    {
+      "url": "https://deliciousbrains.com/reliable-remote-requests-http-api/",
+      "title": "Architecting Reliable Remote Requests with the WordPress HTTP API",
+      "date": "2026-02-26"
     }
   ],
-  "lastIssue": "2026-02-25",
-  "totalIssues": 3
+  "lastIssue": "2026-02-26",
+  "totalIssues": 4
 }
