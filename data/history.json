@@ -99,8 +99,23 @@
       "url": "https://make.wordpress.org/community/2026/02/25/update-2026-wp-community-team-reps-voting-ends/",
       "title": "2026 WordPress Community Team Reps Voting Wraps Up",
       "date": "2026-02-26"
+    },
+    {
+      "url": "https://wordpress.org/news/2026/02/wordpress-7-0-beta-2/",
+      "title": "WordPress 7.0 Beta 2",
+      "date": "2026-02-27"
+    },
+    {
+      "url": "https://wpbuilds.com/2026/02/26/458-unpacking-the-clever-content-area-block-with-ian-svoboda/",
+      "title": "WP Builds #458: Content Area Block Plugin with Ian Svoboda",
+      "date": "2026-02-27"
+    },
+    {
+      "url": "https://elementor.com/blog/web-fwrd-2026-recap/",
+      "title": "Elementor Web.fwrd 2026 Recap: Editor v4, Angie Code, Elementor One",
+      "date": "2026-02-27"
     }
   ],
-  "lastIssue": "2026-02-26",
-  "totalIssues": 4
+  "lastIssue": "2026-02-27",
+  "totalIssues": 5
 }
