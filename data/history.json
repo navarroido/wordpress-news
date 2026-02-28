@@ -114,8 +114,33 @@
       "url": "https://elementor.com/blog/web-fwrd-2026-recap/",
       "title": "Elementor Web.fwrd 2026 Recap: Editor v4, Angie Code, Elementor One",
       "date": "2026-02-27"
+    },
+    {
+      "url": "https://www.wordfence.com/blog/2026/02/wordfence-intelligence-weekly-wordpress-vulnerability-report-february-16-2026-to-february-22-2026/",
+      "title": "Wordfence Intelligence Weekly WordPress Vulnerability Report (February 16-22, 2026)",
+      "date": "2026-02-28"
+    },
+    {
+      "url": "https://www.wpbeginner.com/news/wpbeginner-spotlight-21-from-app-kits-to-ai-agents-big-moves-in-the-wordpress-ecosystem/",
+      "title": "WPBeginner Spotlight 21: From App Kits to AI Agents",
+      "date": "2026-02-28"
+    },
+    {
+      "url": "https://yoast.com/recap-february-2026-seo-update-by-yoast/",
+      "title": "Recap of the February 2026 SEO Update by Yoast",
+      "date": "2026-02-28"
+    },
+    {
+      "url": "https://www.advancedcustomfields.com/blog/wordpress-required-fields/",
+      "title": "WordPress Required Fields: What Really Happens Under the Hood",
+      "date": "2026-02-28"
+    },
+    {
+      "url": "https://patchstack.com/articles/bigwetfish-hosting-partners-with-patchstack-for-wordpress-security/",
+      "title": "BigWetFish Hosting Partners with Patchstack for WordPress Security",
+      "date": "2026-02-28"
     }
   ],
-  "lastIssue": "2026-02-27",
-  "totalIssues": 5
+  "lastIssue": "2026-02-28",
+  "totalIssues": 6
 }

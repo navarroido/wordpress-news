@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Pulse — February 28, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#f0f2f5; font-family:'Inter',Arial,sans-serif; direction:ltr; }
+    a { text-decoration:none; color:inherit; }
+    img { display:block; max-width:100%; border:0; }
+
+    /* ---- WRAPPER ---- */
+    .wrap { max-width:680px; margin:0 auto; padding:0 0 48px; }
+
+    /* ---- HEADER ---- */
+    .header {
+      background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 40%, #0f3460 100%);
+      padding: 44px 32px 36px;
+      text-align: center;
+      color: #fff;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 10px;
+      padding: 5px 14px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+    .header h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; margin-bottom: 8px; }
+    .header .subtitle { font-size: 14px; color: rgba(255,255,255,0.5); }
+
+    /* ---- FULL-WIDTH CARD ---- */
+    .card-full {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 20px 16px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    .card-full .hero {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-full .body { padding: 24px 28px 28px; }
+    .card-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6366f1;
+      margin-bottom: 10px;
+    }
+    .card-full h2 { font-size: 22px; font-weight: 800; color: #111827; line-height: 1.3; margin-bottom: 12px; }
+    .card-full p { font-size: 15px; color: #374151; line-height: 1.6; margin-bottom: 18px; }
+    .btn {
+      display: inline-block;
+      background: #111827;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .btn:hover { background: #1f2937; }
+
+    /* ---- SIDE-BY-SIDE CARDS ---- */
+    .card-row {
+      display: flex;
+      gap: 16px;
+      margin: 20px 16px 0;
+    }
+    .card-half {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      flex: 1;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-half .thumb {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-half .body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .card-half h2 { font-size: 16px; font-weight: 800; color: #111827; line-height: 1.35; margin-bottom: 10px; }
+    .card-half p { font-size: 13px; color: #374151; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+    .card-half .btn { font-size: 12px; padding: 8px 18px; align-self: flex-start; }
+
+    /* ---- HORIZONTAL CARD ---- */
+    .card-horizontal {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 20px 16px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: stretch;
+    }
+    .card-horizontal .text { padding: 28px; flex: 1; }
+    .card-horizontal h2 { font-size: 20px; font-weight: 800; color: #111827; line-height: 1.3; margin-bottom: 10px; }
+    .card-horizontal p { font-size: 14px; color: #374151; line-height: 1.6; margin-bottom: 16px; }
+    .card-horizontal .thumb {
+      width: 220px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    /* ---- TREND BOX ---- */
+    .trend {
+      background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #7c3aed 100%);
+      border-radius: 16px;
+      margin: 20px 16px 0;
+      padding: 32px 32px 36px;
+      color: #fff;
+    }
+    .trend-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 12px;
+    }
+    .trend h3 { font-size: 22px; font-weight: 900; line-height: 1.3; margin-bottom: 14px; }
+    .trend p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.65; }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 32px 20px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-badge">WordPress Newsletter</div>
+    <h1>WP Pulse</h1>
+    <p class="subtitle">Your weekly WordPress digest &middot; Saturday, February 28, 2026</p>
+  </div>
+
+  <!-- ITEM 1: Wordfence Weekly Vulnerability Report (full-width) -->
+  <div class="card-full">
+    <img class="hero" src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="Wordfence Vulnerability Report">
+    <div class="body">
+      <div class="card-tag">🔒 Security</div>
+      <h2>195 WordPress Vulnerabilities Disclosed in a Single Week</h2>
+      <p>Wordfence's weekly intelligence report for February 16-22 logs a substantial batch of plugin and theme vulnerabilities, several at critical severity. Alongside the disclosure data, Wordfence has launched a Triple Threat Bug Bounty Challenge running through April 6, offering 2x payouts on high-threat submissions to incentivize researchers to hunt the riskiest attack surfaces.</p>
+      <a class="btn" href="https://www.wordfence.com/blog/2026/02/wordfence-intelligence-weekly-wordpress-vulnerability-report-february-16-2026-to-february-22-2026/">See full report</a>
+    </div>
+  </div>
+
+  <!-- ITEM 2: WPBeginner Spotlight 21 (full-width) -->
+  <div class="card-full">
+    <img class="hero" src="https://www.wpbeginner.com/wp-content/uploads/2026/02/spotlight-feb-2026-og.jpg" alt="WPBeginner Spotlight February 2026">
+    <div class="body">
+      <div class="card-tag">🌟 Industry News</div>
+      <h2>App Kits, AI Agents, WordPress 7.0: February's Biggest Moves</h2>
+      <p>WPBeginner's February Spotlight rounds up the most eventful month in recent memory. WordPress 7.0 Beta is live for testing, MemberPress AppKit lets membership sites launch branded iOS and Android apps without code, and AI agent integrations are spreading fast across the plugin ecosystem. One issue, five storylines worth your attention.</p>
+      <a class="btn" href="https://www.wpbeginner.com/news/wpbeginner-spotlight-21-from-app-kits-to-ai-agents-big-moves-in-the-wordpress-ecosystem/">Read the roundup</a>
+    </div>
+  </div>
+
+  <!-- ITEMS 3 + 4: side-by-side -->
+  <div class="card-row">
+
+    <!-- ITEM 3: Yoast SEO Update -->
+    <div class="card-half">
+      <img class="thumb" src="https://yoast.com/app/uploads/2026/02/recap_image_february_yoast_update.jpg" alt="Yoast February 2026 SEO Update">
+      <div class="body">
+        <div class="card-tag">🔍 Research</div>
+        <h2>AI Is Rewriting the Search Rules: Yoast's February Breakdown</h2>
+        <p>Yoast's monthly SEO update unpacks February's AI-driven search shifts. Bing's new citation report shows publishers how often Copilot references their site, while Google's expanded robots.txt controls let sites manage AI crawler access with precision. The agentic web is no longer hypothetical.</p>
+        <a class="btn" href="https://yoast.com/recap-february-2026-seo-update-by-yoast/">Read the recap</a>
+      </div>
+    </div>
+
+    <!-- ITEM 4: ACF Required Fields -->
+    <div class="card-half">
+      <img class="thumb" src="https://www.advancedcustomfields.com/wp-content/uploads/2026/02/wordpress-required-fields-feature.png" alt="WordPress Required Fields">
+      <div class="body">
+        <div class="card-tag">📝 Tutorial</div>
+        <h2>That Asterisk Is Lying to You About Required Fields</h2>
+        <p>ACF's deep-dive reveals a common WordPress trap: the required-field asterisk is purely visual and enforces nothing on its own. The post maps out how forms, registration plugins, and publishing workflows each handle validation differently, and shows where server-side enforcement is the only reliable option.</p>
+        <a class="btn" href="https://www.advancedcustomfields.com/blog/wordpress-required-fields/">Read the deep-dive</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ITEM 5: Patchstack + BigWetFish (horizontal) -->
+  <div class="card-horizontal">
+    <div class="text">
+      <div class="card-tag">🔐 Security</div>
+      <h2>Another Host Bets on Patchstack for WordPress Security</h2>
+      <p>UK and Ireland-based BigWetFish Hosting has integrated Patchstack's automated vulnerability detection, giving customers real-time protection during the critical window between a vulnerability's public disclosure and an available patch. It's the latest sign that serious hosting providers are treating dedicated WordPress security tooling as a baseline, not a bonus.</p>
+      <a class="btn" href="https://patchstack.com/articles/bigwetfish-hosting-partners-with-patchstack-for-wordpress-security/">Read announcement</a>
+    </div>
+    <img class="thumb" src="https://patchstack.com/wp-content/uploads/2026/02/BWF-Patchstack.png" alt="BigWetFish and Patchstack partnership">
+  </div>
+
+  <!-- TREND OF THE WEEK -->
+  <div class="trend">
+    <div class="trend-label">Trend of the Week</div>
+    <h3>Security and AI Are Eating the WordPress Ecosystem</h3>
+    <p>This week's news makes two forces impossible to ignore. WordPress security is professionalizing at pace: Wordfence's weekly disclosures keep climbing, and hosting providers are embedding Patchstack-style protection as a baseline expectation, not an upgrade. Simultaneously, AI is reshaping how WordPress sites are discovered, built, and ranked, as Yoast's February update makes clear. The builders paying attention to both fronts right now are the ones who will be well-positioned when these shifts fully mature.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Issue #6 &middot; February 28, 2026 &middot; Built by Navarro 🦅
+  </div>
+
+</div>
+</body>
+</html>
