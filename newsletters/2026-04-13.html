@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WP Pulse — April 13, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#f0f2f5; font-family:'Inter',Arial,sans-serif; direction:ltr; }
+    a { text-decoration:none; color:inherit; }
+    img { display:block; max-width:100%; border:0; }
+
+    .wrapper { max-width:680px; margin:0 auto; padding:24px 16px; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-radius:16px;
+      padding:40px 32px;
+      margin-bottom:20px;
+      text-align:center;
+    }
+    .header-logo {
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      color:#7c8db5;
+      margin-bottom:10px;
+    }
+    .header-title {
+      font-size:42px;
+      font-weight:900;
+      color:#ffffff;
+      letter-spacing:-1px;
+      margin-bottom:8px;
+    }
+    .header-title span { color:#4f8ef7; }
+    .header-subtitle {
+      font-size:14px;
+      color:#8899bb;
+      font-weight:400;
+    }
+    .header-badge {
+      display:inline-block;
+      margin-top:14px;
+      background:rgba(79,142,247,0.15);
+      border:1px solid rgba(79,142,247,0.3);
+      color:#4f8ef7;
+      font-size:12px;
+      font-weight:600;
+      padding:4px 14px;
+      border-radius:20px;
+      letter-spacing:0.5px;
+    }
+
+    /* Cards */
+    .card {
+      background:#ffffff;
+      border-radius:14px;
+      overflow:hidden;
+      margin-bottom:16px;
+      box-shadow:0 2px 12px rgba(0,0,0,0.07);
+      transition:box-shadow 0.2s;
+    }
+    .card:hover { box-shadow:0 6px 24px rgba(0,0,0,0.12); }
+
+    /* Full-width hero cards (items 1 & 2) */
+    .card-hero .card-image {
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+    .card-body {
+      padding:22px 24px 20px;
+    }
+    .card-tag {
+      display:inline-block;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      padding:3px 10px;
+      border-radius:20px;
+      margin-bottom:10px;
+    }
+    .tag-industry { background:#fff3e0; color:#e65100; }
+    .tag-security { background:#fce4ec; color:#c62828; }
+    .tag-core { background:#e8f5e9; color:#2e7d32; }
+    .tag-research { background:#ede7f6; color:#4527a0; }
+    .tag-plugin { background:#e3f2fd; color:#1565c0; }
+
+    .card-headline {
+      font-size:19px;
+      font-weight:800;
+      color:#1a1a2e;
+      line-height:1.35;
+      margin-bottom:10px;
+    }
+    .card-body-text {
+      font-size:14px;
+      color:#555e73;
+      line-height:1.65;
+      margin-bottom:16px;
+    }
+    .card-cta {
+      display:inline-block;
+      background:#4f8ef7;
+      color:#ffffff;
+      font-size:13px;
+      font-weight:600;
+      padding:9px 20px;
+      border-radius:8px;
+      letter-spacing:0.2px;
+    }
+    .card-cta:hover { background:#3a7de0; }
+
+    /* Side-by-side cards (items 3 & 4) */
+    .card-row {
+      display:flex;
+      gap:16px;
+      margin-bottom:16px;
+    }
+    .card-half {
+      flex:1;
+      min-width:0;
+    }
+    .card-half .card-image {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+    .card-half .card-headline { font-size:16px; }
+    .card-half .card-body-text { font-size:13px; }
+
+    /* Horizontal card (item 5) */
+    .card-horizontal {
+      display:flex;
+      flex-direction:row;
+      align-items:stretch;
+    }
+    .card-horizontal .card-text-side {
+      flex:1;
+      padding:22px 24px 20px;
+      min-width:0;
+    }
+    .card-horizontal .card-image-side {
+      width:220px;
+      flex-shrink:0;
+    }
+    .card-horizontal .card-image-side img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* Trend box */
+    .trend-box {
+      background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+      border-radius:14px;
+      padding:28px 28px;
+      margin-bottom:20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .trend-box::before {
+      content:'✦';
+      position:absolute;
+      top:-10px;
+      right:20px;
+      font-size:80px;
+      color:rgba(255,255,255,0.05);
+      pointer-events:none;
+    }
+    .trend-label {
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.6);
+      margin-bottom:8px;
+    }
+    .trend-title {
+      font-size:20px;
+      font-weight:800;
+      color:#ffffff;
+      line-height:1.3;
+      margin-bottom:12px;
+    }
+    .trend-body {
+      font-size:14px;
+      color:rgba(255,255,255,0.82);
+      line-height:1.65;
+    }
+
+    /* Footer */
+    .footer {
+      text-align:center;
+      padding:16px 0 8px;
+    }
+    .footer-text {
+      font-size:12px;
+      color:#99a3b5;
+    }
+
+    @media (max-width:500px) {
+      .card-row { flex-direction:column; }
+      .card-horizontal { flex-direction:column-reverse; }
+      .card-horizontal .card-image-side { width:100%; height:180px; }
+      .header-title { font-size:32px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-logo">WordPress Newsletter</div>
+    <div class="header-title">WP <span>Pulse</span></div>
+    <div class="header-subtitle">Your weekly WordPress digest &middot; Monday, April 13, 2026</div>
+    <div class="header-badge">Issue #10</div>
+  </div>
+
+  <!-- Item 1: WordCamp Asia — full-width hero -->
+  <a href="https://wordpress.org/news/2026/04/celebrating-wcasia-2026/" target="_blank" rel="noopener">
+    <div class="card card-hero">
+      <img class="card-image" src="https://i0.wp.com/wordpress.org/news/files/2026/04/IMG_9040-scaled.jpg?fit=1200%2C674&ssl=1" alt="WordCamp Asia 2026 in Mumbai" />
+      <div class="card-body">
+        <span class="card-tag tag-industry">🌏 Industry News</span>
+        <div class="card-headline">WordCamp Asia 2026 Sets Records with 2,281 Attendees in Mumbai</div>
+        <div class="card-body-text">The WordPress community converged on Mumbai for WordCamp Asia 2026, making it one of the largest events in the conference's history. Three packed days covered AI, open source, enterprise, and community growth at the Jio World Convention Centre. Executive Director Mary Hubbard put it plainly: WordPress is a shared commitment, not a company.</div>
+        <span class="card-cta">Read the full recap</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Item 2: Matt Mullenweg — full-width hero -->
+  <a href="https://make.wordpress.org/core/2026/04/11/elevating-individuals/" target="_blank" rel="noopener">
+    <div class="card card-hero">
+      <img class="card-image" src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="Mullenweg on individual contributors" />
+      <div class="card-body">
+        <span class="card-tag tag-industry">🔥 Industry News</span>
+        <div class="card-headline">Mullenweg Wants WordPress to Celebrate People, Not Just Sponsors</div>
+        <div class="card-body-text">A viral photo of WordCamp Asia badges listing "SELF EMPLOYED" as company affiliation sparked a candid reflection from Matt Mullenweg. He admitted that the push for corporate sponsorship may have come at the cost of recognizing the individual contributors who actually power the project. His call to action: put people back at the center of WordPress culture.</div>
+        <span class="card-cta">Read his full post</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Items 3 & 4: side-by-side -->
+  <div class="card-row">
+
+    <!-- Item 3: Smart Slider Security -->
+    <a href="https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/" target="_blank" rel="noopener" class="card-half">
+      <div class="card" style="height:100%;">
+        <img class="card-image" src="https://wp.patchstack.com/wp-content/uploads/2026/04/og-critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis.png" alt="Smart Slider 3 Pro supply chain attack" />
+        <div class="card-body">
+          <span class="card-tag tag-security">🚨 Security</span>
+          <div class="card-headline">Smart Slider 3 Pro Hacked via Official Update Channel: Act Now</div>
+          <div class="card-body-text">For about six hours on April 7, anyone who updated Smart Slider 3 Pro received a backdoored build, not the real plugin. Attackers breached Nextend's update infrastructure and distributed a remote access toolkit. If you installed version 3.5.1.35, treat your site as fully compromised and upgrade to 3.5.1.36 immediately.</div>
+          <span class="card-cta">Read the full malware analysis</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Item 4: Gutenberg 22.9 -->
+    <a href="https://make.wordpress.org/core/2026/04/09/whats-new-in-gutenberg-22-9-8-april/" target="_blank" rel="noopener" class="card-half">
+      <div class="card" style="height:100%;">
+        <img class="card-image" src="https://make.wordpress.org/core/files/2026/04/image.png" alt="Gutenberg 22.9" />
+        <div class="card-body">
+          <span class="card-tag tag-core">🔧 Core Update</span>
+          <div class="card-headline">Gutenberg 22.9 Brings Gradients, Smarter Commands, and Better Collaboration</div>
+          <div class="card-body-text">The latest Gutenberg release packs 131 merged pull requests into one update, adding background gradient support for the Group block and a revamped command palette with history and smart suggestions. Real-time collaboration gets a stability boost, and a new standardized empty-state component keeps the editor UI consistent.</div>
+          <span class="card-cta">See what's new</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Item 5: Wordfence AI — horizontal card -->
+  <a href="https://www.wordfence.com/blog/2026/04/the-increasing-role-of-ai-in-vulnerability-research/" target="_blank" rel="noopener">
+    <div class="card card-horizontal">
+      <div class="card-text-side">
+        <span class="card-tag tag-research">🤖 Research</span>
+        <div class="card-headline">AI Now Drives Two-Thirds of WordPress Vulnerability Research Submissions</div>
+        <div class="card-body-text">Wordfence's bug bounty data tells a striking story: AI-assisted vulnerability submissions have surged from 16% to 66% in just a few months. That shift is reshaping how quickly security flaws are found and how teams must triage them. CEO Mark Maunder breaks down what this acceleration means for the WordPress ecosystem.</div>
+        <span class="card-cta">Read the research</span>
+      </div>
+      <div class="card-image-side">
+        <img src="https://s.w.org/images/home/wordpress-default-ogimage.png" alt="Wordfence AI in vulnerability research" />
+      </div>
+    </div>
+  </a>
+
+  <!-- Trend of the Week -->
+  <div class="trend-box">
+    <div class="trend-label">Trend of the Week</div>
+    <div class="trend-title">AI and Community Values Are Reshaping the WordPress World</div>
+    <div class="trend-body">This week's news reveals a WordPress ecosystem in transition, on two fronts at once. AI is accelerating security research at an unprecedented pace, while a supply chain attack is a sharp reminder that speed without vigilance is dangerous. At the same time, conversations at WordCamp Asia are pushing the community to ask a harder question: who does WordPress actually celebrate, and why?</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-text">Issue #10 &middot; April 13, 2026 &middot; Built by Navarro 🦅</div>
+  </div>
+
+</div>
+</body>
+</html>

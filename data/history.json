@@ -139,8 +139,33 @@
       "url": "https://patchstack.com/articles/bigwetfish-hosting-partners-with-patchstack-for-wordpress-security/",
       "title": "BigWetFish Hosting Partners with Patchstack for WordPress Security",
       "date": "2026-02-28"
+    },
+    {
+      "url": "https://wordpress.org/news/2026/04/celebrating-wcasia-2026/",
+      "title": "WordCamp Asia 2026 Wraps Up in Mumbai with Record 2,281 Attendees",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://make.wordpress.org/core/2026/04/11/elevating-individuals/",
+      "title": "Matt Mullenweg Calls for a Culture Shift Back to Individual Recognition",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/",
+      "title": "Critical Supply Chain Attack on Smart Slider 3 Pro Distributed via Official Update",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://make.wordpress.org/core/2026/04/09/whats-new-in-gutenberg-22-9-8-april/",
+      "title": "Gutenberg 22.9 Released: Background Gradients, Command Palette Upgrades & Collaboration Fixes",
+      "date": "2026-04-13"
+    },
+    {
+      "url": "https://www.wordfence.com/blog/2026/04/the-increasing-role-of-ai-in-vulnerability-research/",
+      "title": "Wordfence: AI Now Powers 66% of WordPress Vulnerability Research Submissions",
+      "date": "2026-04-13"
     }
   ],
-  "lastIssue": "2026-03-16",
-  "totalIssues": 9
+  "lastIssue": "2026-04-13",
+  "totalIssues": 10
 }
